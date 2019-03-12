@@ -46,6 +46,7 @@ create table SALES_ORDER (
     DATE_ date not null,
     AMOUNT decimal(19, 2),
     CUSTOMER_ID varchar(36),
+    DETAILS_ID varchar(36),
     --
     primary key (ID)
 )^
@@ -68,3 +69,20 @@ create table SALES_ORDER_LINE (
     primary key (ID)
 )^
 -- end SALES_ORDER_LINE
+-- begin SALES_ORDER_DETAILS
+create table SALES_ORDER_DETAILS (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    STATE varchar(255),
+    VALUE_ decimal(19, 2),
+    --
+    primary key (ID)
+)^
+-- end SALES_ORDER_DETAILS

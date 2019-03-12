@@ -42,6 +42,12 @@
                                 type="picker_open"/>
                     </actions>
                 </lookupPickerField>
+                <pickerField id="detailsField" property="details">
+                    <actions>
+                        <action id="open" type="picker_open_composition"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </pickerField>
             </column>
         </form>
         <groupBox id="linesBox"

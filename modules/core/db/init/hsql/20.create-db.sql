@@ -1,5 +1,6 @@
 -- begin SALES_ORDER
 alter table SALES_ORDER add constraint FK_SALES_ORDER_CUSTOMER foreign key (CUSTOMER_ID) references SALES_CUSTOMER(ID)^
+alter table SALES_ORDER add constraint FK_SALES_ORDER_DETAILS foreign key (DETAILS_ID) references SALES_ORDER_DETAILS(ID)^
 create index IDX_SALES_ORDER_CUSTOMER on SALES_ORDER (CUSTOMER_ID)^
 -- end SALES_ORDER
 -- begin SALES_ORDER_LINE
